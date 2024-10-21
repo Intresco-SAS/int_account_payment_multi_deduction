@@ -1,0 +1,17 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record id="view_account_payment_form_multi_deduction" model="ir.ui.view">
+      <field name="name">account.payment.form.multi.deduction</field>
+      <field name="model">account.payment</field>
+      <field name="inherit_id" ref="account.view_account_payment_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='ref']" position="after">
+          <field name="is_multi_deduction" string="Deducciones Multiples"/>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>
